@@ -22,22 +22,37 @@
     <ImageView
             android:layout_width="353dp"
             android:layout_height="345dp" app:srcCompat="@color/colorPrimary"
-            tools:layout_editor_absoluteY="16dp" tools:layout_editor_absoluteX="16dp" android:id="@+id/imageView"
-            android:background="@color/colorAccent"/>
+            android:id="@+id/imageView"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toTopOf="@+id/buttonAll"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp" android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"/>
     <Button
             android:text="Copy Both"
             android:layout_width="wrap_content"
-            android:layout_height="56dp" tools:layout_editor_absoluteY="384dp"
-            tools:layout_editor_absoluteX="142dp" android:id="@+id/buttonAll"/>
+            android:layout_height="56dp"
+            android:id="@+id/buttonAll" app:layout_constraintEnd_toStartOf="@+id/buttonText"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toEndOf="@+id/buttonNum"
+            android:layout_marginStart="16dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/navigation" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"/>
     <Button
             android:text="Copy Numbers"
             android:layout_width="98dp"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="384dp"
-            tools:layout_editor_absoluteX="16dp" android:id="@+id/buttonNum"
-    />
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonNum"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/navigation"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
     <Button
             android:layout_width="wrap_content"
-            android:layout_height="56dp" tools:layout_editor_absoluteY="384dp"
-            tools:layout_editor_absoluteX="269dp" android:id="@+id/buttonText" android:text="Copy Text"/>
+            android:layout_height="56dp"
+            android:id="@+id/buttonText" android:text="Copy Text"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/navigation"
+            app:layout_constraintStart_toEndOf="@+id/buttonAll" android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
